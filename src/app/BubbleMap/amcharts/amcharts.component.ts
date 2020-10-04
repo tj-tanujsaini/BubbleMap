@@ -50,8 +50,8 @@ export class AmchartsComponent implements OnInit, AfterViewInit, OnDestroy {
     imageSeries.mapImages.template.propertyFields.longitude = "longitude";
     imageSeries.mapImages.template.propertyFields.latitude = "latitude";
     imageSeries.mapImages.template.tooltipText = "{title}, {monthsStay} months";
-    // imageSeries.mapImages.template.propertyFields.url = "url";
 
+    
     let circle = imageSeries.mapImages.template.createChild(am4core.Circle);
     circle.propertyFields.radius = "monthsStay";
     circle.fillOpacity = 0.3;
@@ -62,6 +62,13 @@ export class AmchartsComponent implements OnInit, AfterViewInit, OnDestroy {
     let circle2 = imageSeries.mapImages.template.createChild(am4core.Circle);
     circle2.radius = 3;
     circle2.propertyFields.fill = "color";
+
+    //Label
+    let label = imageSeries.mapImages.template.createChild(am4core.Label);
+    label.text = "{title}";
+    label.fontSize = 12;
+    label.opacity = 0.9;
+    label.padding(2,2,2,2);
 
     let colorSet = new am4core.ColorSet();
 

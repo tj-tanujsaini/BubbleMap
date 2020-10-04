@@ -74,7 +74,16 @@ export class AmchartsConnectionComponent implements OnInit, AfterViewInit {
     lineTemplate.arrow.height = 8;
     lineTemplate.stroke = interfaceColors.getFor("alternativeBackground");
     lineTemplate.fill = interfaceColors.getFor("alternativeBackground");
-    lineTemplate.line.strokeOpacity = 0.5;
+    lineTemplate.line.strokeOpacity = 0.3;
+
+    //Label
+    let label = imageSeries.mapImages.template.createChild(am4core.Label);
+    label.text = "{title}";
+    label.fontSize = 12;
+    label.fillOpacity = 0.8;
+    label.padding(3,3,3,3);
+    label.background.fill = am4core.color("#eee");
+
 
     lineSeries.data = [
       {
