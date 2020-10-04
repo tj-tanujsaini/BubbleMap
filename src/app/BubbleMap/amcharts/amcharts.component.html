@@ -1,3 +1,19 @@
-<div>
-    <div id="chartdiv"></div>
+<div class="wrapper">
+    <div id="chartdiv" class="map-class"></div>
+    <div class="data-cities">
+        <table>
+            <tr>
+                <th>City</th>
+                <th class="month-class">Months of Stay</th>
+            </tr>
+            <tr *ngFor="let data of dataSet">
+                <td>
+                    {{ data.title }}
+                </td>
+                <td class="month-class">
+                    {{ data.monthsStay }}
+                </td>
+            </tr>
+        </table>
+    </div>
 </div>

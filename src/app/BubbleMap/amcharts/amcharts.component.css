@@ -1,5 +1,44 @@
-div{
+.wrapper{
     width: 100%;
     height: 550px;
+    display: flex;
+}
+
+.map-class{
+    width: 60%;
+    text-align: center;
+}
+
+.data-cities{
+    width: 40%;
+    display: flex;
+    text-align: left;
+}
+
+.data-cities table{
+    margin: auto;
+    font-size: 18px;
+    border: solid 1px olive;
+    box-shadow: 0 0 10px 5px #ccc;
+    border-radius: 10px;
+    outline: none;
+    padding: 20px 40px;
+}
+
+.data-cities th{
+    padding: 10px 30px 10px 10px;
+    border: olive solid 1px;
+    border-radius: 5px;
+    box-shadow: 0 0 3px 3px #ccc;
+    background-color: #eee;
+}
+
+.data-cities td{
+    padding: 10px 30px 10px 10px;
+    border-bottom: #ccc solid 1px;
+    /* border-radius: 5px; */
+}
+
+.month-class{
     text-align: center;
 }

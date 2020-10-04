@@ -16,6 +16,8 @@ export class AmchartsComponent implements OnInit, AfterViewInit, OnDestroy {
 
   private chart: am4maps.MapChart;
 
+  dataSet = [];
+
   constructor() { }
 
   ngOnInit() { }
@@ -137,6 +139,8 @@ export class AmchartsComponent implements OnInit, AfterViewInit, OnDestroy {
         "monthsStay": 60
       },
     ];
+
+    this.dataSet = imageSeries.data;
 
   }
 
